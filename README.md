@@ -39,16 +39,11 @@ DirectCredit is a full-stack, comprehensive loan management platform that replic
 * **Loan Applications**: Can submit applications for various loan types (Personal, Home, Auto, Education, Business).
 * **Status Tracking**: Can monitor the real-time status of their applications and view detailed timelines from submission to disbursement.
 
-### 2. Administrator (Standard Admin)
+### 2. Administrator (Admin)
 * **Dashboard Analytics**: Views real-time KPI metrics, recent applications, and loan distribution charts.
 * **Application Processing**: Can review detailed applicant profiles alongside the Eligibility Engine's analysis and rule-by-rule breakdown.
 * **Decision Making**: Has authority to Approve or Reject loans based on the engine's recommendation and manual review. Must provide rejection reasons and internal remarks.
 
-### 3. Super Administrator (Super Admin)
-* **All Admin Privileges**: Inherits all capabilities of a standard Administrator.
-* **Financial Disbursement**: Only Super Admins have the authority to process the final funds transfer (NEFT/RTGS/IMPS) and disburse money for approved loans.
-* **User & Audit Management**: Has exclusive access to view all registered customers and inspect the immutable system activity audit logs.
-* **System Settings**: (Future Scope) Ability to manage eligibility rules, interest rates, and system-wide configurations.
 
 ---
 
@@ -137,5 +132,4 @@ directCredit/
     └── src/context/       # Customer Auth state management
 ```
 
-## 🛡️ Firewall & Network Notes
-The backend has been configured to use `@neondatabase/serverless` with the `ws` library. This tunnels raw database traffic over WebSockets (Port 443) instead of the standard PostgreSQL TCP port (5432). This ensures that developers can run the system seamlessly on restrictive corporate, university, or public Wi-Fi networks without encountering `ETIMEDOUT` database connection errors.
+
