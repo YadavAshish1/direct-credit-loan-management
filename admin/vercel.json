@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://direct-credit-loan-management.mymail2001id.deno.net/api/$1"
+      "destination": "https://direct-credit-loan-management.mymail2001id.deno.net/$1"
     }
   ]
 }
